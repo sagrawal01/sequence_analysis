@@ -7,14 +7,14 @@ In the command line, navigate to the folder where you have downloaded code and d
 
 Run `$docker images` to check that your image was built. Once you see it, run `$docker run -it -v (current working directory):/app USERNAME/PROJECT:VERSION /bin/bash` in command line. This will run the container. Then navigate to analyze_sequence.py and do the following:
 
-1. Question 1a) To determine (base-sugar units and linkages), run the following example command on terminal inside the docker container:
+1. To determine (base-sugar units and linkages), run the following example command on terminal inside the docker container:
    `python3 analyze_sequence.py RUN_BASE_SUGAR_UNITS -Uro-Uro-Gro-Ums-Um`
     
-2. Question 1b) To calcuate the molecular mass of the sequence, run the following example command on terminal inside the docker container:
+2. To calcuate the molecular mass of the sequence, run the following example command on terminal inside the docker container:
    `python3 analyze_sequence.py RUN_CALCULATE_MASS -Uro-Uro-Gro-Ums-Um '{"-Ur":1.0011, "-Gr": 1, "-Um":2, "o":1, "s": 3}'`
     
-3. Question 2) To generate shipping label from sequence, run the following example command on terminal inside the docker container:
+3. To generate shipping label from sequence, run the following example command on terminal inside the docker container:
     `python3 analyze_sequence.py RUN_GENERATE_SHIPPING_LABEL -Gdo-Gdo-Ado-Ado-Tdo-Gro-Gro-Cro-Uro-Uro-Uro-Ur`
 
-4. Question 3) To validate sequence data, run the following example command on terminal inside the docker container:
+4. To validate sequence data, run the following example command on terminal inside the docker container:
     `python3 analyze_sequence.py RUN_SEQUENCE_CHECKER -Gro-Gro-Gro-Ums-Am`
